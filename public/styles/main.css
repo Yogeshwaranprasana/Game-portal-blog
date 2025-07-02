@@ -1,0 +1,202 @@
+* {
+  user-select: none;
+}
+
+/* wheather its write a code for transitions for the home page  */
+.game-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.game-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* create blog form styling */
+
+form h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+form input.box,
+form textarea.box {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input.box:focus,
+form textarea.box:focus {
+  border-color: #007BFF;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+/* style apply for edit */
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .form-label {
+    font-weight: 500;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    /* padding: 12px; */
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .container {
+      padding: 10px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .btn-primary {
+      font-size: 16px;
+      /* padding: 10px; */
+    }
+
+    .form-control {
+      font-size: 15px;
+    }
+  }
+
+
+/*about */
+#about {
+  text-align: center;
+}
+.game-align{
+  display: flex;
+  justify-content: flex-start;
+}
+
+ img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1.5rem;
+    border-radius: 1%;
+    height:100vh;
+}
+
+.custom-img {
+  height:450px;
+  object-fit: cover; 
+}
+
+
+/* post new blog style */
+
+.box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Center each card container */
+.card-container {
+  max-width: 650px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Style the card body */
+.card-body {
+  padding: 20px;
+}
+
+/* Blog Title */
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+/* Author*/
+.card-subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+/* Content  */
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 15px;
+  }
+
+}
+
+.btn-buy {
+  display: flex;
+  justify-content: flex-start;
+  border-radius:7px;
+  width:fit-content;
+
+}
+
+/************        ************* */
+
+
+

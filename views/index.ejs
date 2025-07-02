@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog web</title>
+</head>
+<body> 
+ <%- include('partials/header.ejs') %>
+
+    <div class="album py-3 bg-body-tertiary" > 
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col game-box">
+                    <div class="card shadow-sm " > 
+                        <!-- <img src="/images/image.jpg" class="img-thumbnail" alt="color full cloud"> -->
+                        <img src="/images/call of duty.jpg" class="bd-placeholder-img card-img-top img-thumbnail" height="225"
+                          preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg" alt="shooting game ">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c"></rect>
+                          <text x="50%" y="50%" fill="#eceeef" dy=".3em"><strong>CALL OF DUTY</strong></text>
+                       </img>
+                       <div class="card-body">
+                          <p class="card-text"><strong>"Only the Strong Survive"</strong>.This isn't just a game -it's survival.How far will you go?.</p> 
+                          <div class="d-flex justify-content-between align-items-center">
+                             <div class="btn-group">
+                                <!-- <a href="https://www.w3schools.com">Visit W3Schools.com!</a> -->
+                                 <a href="/feature" type="button" class="btn btn-sm btn-outline-secondary" >Read more </a>
+                              </div> 
+                              <small class="text-body-secondary">₹499.00</small>
+                          </div>
+                      </div>
+                 </div>
+             </div> 
+               <div class="col game-box">
+                    <div class="card shadow-sm"> 
+                         <!-- <img src="/images/image.jpg" class="img-thumbnail" alt="color full cloud"> -->
+                        <img src="/images/God of war.jpg" class="bd-placeholder-img card-img-top img-thumbnail" height="225"
+                          preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg" alt="god story game ">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c"></rect>
+                          <text x="50%" y="50%" fill="#eceeef" dy=".3em"><strong>GOD OF WAR</strong></text>
+                       </img>
+                       <div class="card-body">
+                          <p class="card-text"><strong>"Become the God You Fear"</strong>.Rage is not your weakness.Only blood can forge redemption.</p> 
+                          <div class="d-flex justify-content-between align-items-center">
+                             <div class="btn-group"> 
+                                <!-- <a href="https://www.w3schools.com">Visit W3Schools.com!</a> -->
+                                <a href="/feature" type="button" class="btn btn-sm btn-outline-secondary">Read more</a>
+                              </div> 
+                              <small class="text-body-secondary">₹499.00</small>
+                          </div>
+                      </div>
+                 </div>
+             </div>
+               <div class="col game-box">
+                    <div class="card shadow-sm"> 
+                        <!-- <img src="/images/image.jpg" class="img-thumbnail" alt="color full cloud"> -->
+                        <img src="/images/demons souls.jpg" class="bd-placeholder-img card-img-top img-thumbnail" height="225"
+                          preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg" alt="demons story game">
+                          <title>Placeholder</title>
+                          <rect width="100%" height="100%" fill="#55595c"></rect>
+                          <text x="50%" y="50%" fill="#eceeef" dy=".3em"><strong>DEMONS SOULS</strong></text>
+                       </img>
+                       <div class="card-body">
+                          <p class="card-text"><strong>"One Life. Endless Deaths"</strong>.Every mistake is punished.Every victory is earned in blood..</p> 
+                          <div class="d-flex justify-content-between align-items-center">
+                             <div class="btn-group"> 
+                                <!-- <a href="https://www.w3schools.com">Visit W3Schools.com!</a> -->
+                                 <a href="/feature" type="button" class="btn btn-sm btn-outline-secondary">Read more</a> 
+                              </div> 
+                              <small class="text-body-secondary">₹499.00</small>
+                          </div>
+                      </div>
+                 </div>
+             </div> 
+           </div> 
+       </div>   
+   </div>
+   <div class="container mb-2 box-item">
+    <% if (posts.length === 0) { %>
+      <h1> Create New Blog Post! </h1>
+    <% } else { %>
+      <% posts.forEach((post, index) => { %>
+        <div class="card-container  ">
+          <div class="card-body ">
+            <h3 class="card-title ">Blog Title:<%= post.title %></h3></br>
+            <h5 class="card-subtitle mb-2 text-muted">Author: <%= post.name %></h5>
+            <p class="card-text"><strong>Content:</strong> <%= post.content %></p>
+            <div class="mt-2">
+              <a href="/edit/<%= index %>" class="btn btn-sm btn-primary" style="display: inline;">Edit</a>
+              <form action="/delete/<%= index %>" method="POST" style="display: inline;">
+                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    <% } %>
+  </div>
+  
+ <%- include('partials/footer.ejs') %> 
+</body>
+</html>

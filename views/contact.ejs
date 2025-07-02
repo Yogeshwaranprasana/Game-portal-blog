@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+  <div class="container box-sizing">
+     <form action="/submit" method="post">
+         <h1>Create a New Blog Post</h1>
+         <label for="Enter your name">Enter Your Name: </label>
+         <input name ="name" type="text" class="box" placeholder="Enter your name" required>
+         <label for="Enter your blog title">Enter Your Blog Title:</label>
+         <input name="title" type="text" class="box" placeholder="Enter your blog title" required>
+         <label for="content">Content: </label>
+         <textarea name="content" class="box" placeholder="Content" required></textarea>
+         <input type="submit"  value="Post">
+     </form>
+   </div>
+<%- include('partials/footer.ejs') %>
